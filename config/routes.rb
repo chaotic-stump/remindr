@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :bank_items
+  resources :groceries
 
 
 end
