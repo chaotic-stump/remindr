@@ -6,7 +6,7 @@
 		<% @groceries.each do |grocery| %>
 			<li>
 				<h4>
-  			<%= link_to grocery.name, grocery_path(grocery) %>
+  			<%= link_to grocery.name, edit_grocery_path(grocery) %>
 				</h4>
   		</li>
   	<% end %>
@@ -15,4 +15,5 @@
   <h3>No grocrys, please add one!</h3>
 <% end %>
 
-<%= link_to 'add new grocrys', new_grocery_path %>
+<%= link_to 'add grocrys', new_grocery_path %>
+<%= link_to 'dashboard', '/' %>

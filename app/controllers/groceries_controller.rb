@@ -12,7 +12,7 @@ class GroceriesController < ApplicationController
   def create
   	@grocery = Grocery.new(grocery_params)
   	if @grocery.save
-  		redirect_to grocery_path(@grocery)
+  		redirect_to groceries_path #(@grocery)
   	else
   		render :new
   	end
@@ -22,13 +22,18 @@ class GroceriesController < ApplicationController
   end
 
   def update
+    if @grocery.update(grocery_params)
+      redirect_to grocery_path(@grocery)
+    else
+      render :edit
+    end
   end
 
   def show
   end
 
   def destroy
-    list_name = @grocery.name
+    grocery_name = @grocery.name
     @grocery.destroy
     redirect_to groceries_path
   end

@@ -8,4 +8,6 @@
 <% end %>
 
 <br />
+<%= link_to 'add more grocrys', new_grocery_path %>
+<%= link_to 'delete grocry item', grocery_path, method: :delete, data: {confirm: 'Sure you wanna delete?'} %>
 <%= link_to 'back to all grocrys', groceries_path %>
