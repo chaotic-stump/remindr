@@ -9,8 +9,9 @@
   <%= f.label :amount %>
   <%= f.text_field :amount %>
 
+
   <%= f.label :due_date %>
-  <%= f.date_select :due_date %>
+  <%= f.date_field :due_date, order: [:month, :day, :year] %>
 
 
 <hr>

@@ -20,11 +20,16 @@ class BankItemsController < ApplicationController
 
 
   def edit
-    @user = current_user
     @bank_item = BankItem.find(params[:id])
   end
 
   def update
+    @bank_item = current_user.bank_items.new(bank_items_params)
+    if @bank_item.update(bank_items_params)
+      redirect_to bank_item_path(@bank_item)
+    else
+      render :edit
+    end
   end
 
   def show
@@ -33,8 +38,9 @@ class BankItemsController < ApplicationController
   end
 
   def destroy
+    @bank_item = current_user.bank_items.find(params[:id])
     @bank_item.destroy
-    redirect_to root_path
+    redirect_to bank_items_path
   end
 
 private

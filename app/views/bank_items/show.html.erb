@@ -6,4 +6,13 @@
   <%= @bank_item.due_date %>
 
 <%= commontator_thread(@bank_item) %>
+<br>
 <%= link_to 'All Bills', bank_items_path %>
+<br>
+<%= link_to 'ADD New Bill', new_bank_item_path %>
+<br>
+<%= link_to 'Delete Bill', bank_item_path, method: :delete %>
+<br>
+<%= link_to 'Edit item', edit_bank_item_path(@bank_item) %>
+<br>
+<%= link_to 'Dashboard', '/' %>
