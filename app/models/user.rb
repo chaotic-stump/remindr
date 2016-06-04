@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :bank_items, dependent: :destroy
-  acts_as_commenter
   has_one :grocery
   validates_presence_of :email
+  acts_as_commenter
 end
