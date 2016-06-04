@@ -1,2 +1,14 @@
 <h1>These are your Bills</h1>
-<p>Find me in app/views/bank_items/index.html.erb</p>
+
+<% @bank_items.each do |item| %>
+  <%= item.name %>
+  <%= item.priority %>
+  <%= item.amount %>
+  <%= item.due_date %>
+  <br>
+
+<% end %>
+
+<%= link_to 'Add A Bill', new_bank_item_path %>
+<br>
+<%= link_to 'Dashboard', '/' %>

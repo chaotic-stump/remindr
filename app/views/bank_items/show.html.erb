@@ -1,2 +1,8 @@
 <h1>BankItems#show</h1>
-<p>Find me in app/views/bank_items/show.html.erb</p>
+
+  <%= @bank_item.name %>
+  <%= @bank_item.priority %>
+  <%= @bank_item.amount %>
+  <%= @bank_item.due_date %>
+
+  <%= link_to 'All Bills', bank_items_path %>
