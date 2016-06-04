@@ -34,11 +34,6 @@ class TodoListsController < ApplicationController
   end
 
   def destroy
-<<<<<<< HEAD
-
-=======
-
->>>>>>> todo_list_views
     @todo_list.destroy
     redirect_to todo_list_path
   end
