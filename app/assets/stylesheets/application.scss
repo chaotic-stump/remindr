@@ -4,3 +4,17 @@
 */
 
 @import 'materialize';
+
+.dashboard-logos img {
+  width:250px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: gray;
+}
+
+.remindr-logo img {
+  margin-top: 30px;
+}

@@ -7,6 +7,8 @@
 	<h3>No grocrys.</h3>
 <% end %>
 
+<%= commontator_thread(@grocery) %>
+
 <br />
 <%= link_to 'add more grocrys', new_grocery_path %>
 <%= link_to 'delete grocry item', grocery_path, method: :delete, data: {confirm: 'Sure you wanna delete?'} %>

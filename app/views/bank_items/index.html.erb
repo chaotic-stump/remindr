@@ -1,11 +1,8 @@
 <h1>These are your Bills</h1>
 
 <% @bank_items.each do |item| %>
-  <%= link_to item.name, item %>
-  <%= item.priority %>
-  <%= item.amount %>
-  <%= item.due_date %>
-  <br>
+  <p>Bill to Pay: <%= link_to item.name, item %> </p>
+  
 
 <% end %>
 
