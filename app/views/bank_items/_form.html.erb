@@ -1,3 +1,4 @@
+<form action="#">
 <%= form_for @bank_item do |f| %>
 
 	<%= f.label :name %>
@@ -13,8 +14,11 @@
   <%= f.label :due_date %>
   <%= f.date_field :due_date, order: [:month, :day, :year] %>
 
+	<%= f.label :mark_complete %>
+	<%= f.check_box :mark_complete %>
 
 <hr>
 
 <%= f.submit%>
+</form>
 <% end %>

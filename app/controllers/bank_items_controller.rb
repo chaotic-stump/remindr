@@ -45,7 +45,7 @@ class BankItemsController < ApplicationController
 
 private
   def bank_items_params
-    params.require(:bank_item).permit(:name, :priority, :amount, :due_date, :user_id)
+    params.require(:bank_item).permit(:name, :priority, :amount, :due_date, :mark_complete, :user_id)
   end
 
 end
