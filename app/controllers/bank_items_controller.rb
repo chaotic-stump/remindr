@@ -1,8 +1,10 @@
 class BankItemsController < ApplicationController
   def index
+    @bank_items = Bank_item.all
   end
 
   def new
+    @bank_items
   end
 
   def create
@@ -24,5 +26,5 @@ class BankItemsController < ApplicationController
 private
   def bank_items_params
   end
-  
+
 end
