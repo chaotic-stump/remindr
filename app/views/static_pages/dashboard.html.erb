@@ -2,5 +2,10 @@
   <!-- < button_to 'Log Out', destroy_user_session_path, method: :delete > -->
 <!-- <h2>Welcome < current_user.first_name > </h2> -->
 
+<%= image_tag current_user.image.url(:medium) %> <hr/>
 
 <%= link_to 'BANKR', bank_items_path %>
+<%= link_to 'GROCRY', groceries_path %>
+<%= link_to 'SYNRGY', todo_lists_path %>
+<%= link_to 'Edit Profile', edit_user_registration_path %> |
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
