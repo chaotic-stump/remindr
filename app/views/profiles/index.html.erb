@@ -1,0 +1,20 @@
+
+<div class="container">
+	<% if @users.any? %>
+		<div class="row">
+			<% @users.each do |user| %>
+			 <div class="col-md-4">
+			 	 <div class="row">
+					 <div class="col-md-12 text-uppercase text-bold text-center">
+							<%= user.first_name %> 
+					  </div>
+					</div>
+					<%= link_to (image_tag user.image.url(:medium)), profile_path(user) %> 
+			</div>
+		<%end%>
+	</div>
+		</ul>
+	<% else %>
+		<h3 class='center'>No users!</h3>
+	<% end %>
+</div>

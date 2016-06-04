@@ -1,6 +1,7 @@
 
   <!-- < button_to 'Log Out', destroy_user_session_path, method: :delete > -->
 <!-- <h2>Welcome < current_user.first_name > </h2> -->
+
 <div class='center remindr-logo'>
   <%=link_to image_tag('remindr_logo.png'), '/'%>
 </div>
@@ -10,3 +11,15 @@
   <%= link_to image_tag('grocry_logo.png'), groceries_path %>
   <%= link_to image_tag('synrgy_logo.png'), todo_lists_path %>
 <div>
+
+<% if (current_user.image.url != "/images/original/missing.png") %>
+	<%= image_tag current_user.image.url(:medium) %> <hr/>
+<% end %>
+<%= link_to 'BANKR', bank_items_path %>
+<%= link_to 'GROCRY', groceries_path %>
+<%= link_to 'SYNRGY', todo_lists_path %>
+<%= link_to 'Edit Profile', edit_user_registration_path %> |
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %> |
+<%= link_to 'Show user', edit_user_registration_path %> |
+<%= link_to 'profiles', profiles_path %>
+

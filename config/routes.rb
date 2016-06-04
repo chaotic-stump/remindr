@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
 root 'static_pages#dashboard'
 
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
@@ -11,5 +12,7 @@ root 'static_pages#dashboard'
   resources :groceries
 
   mount Commontator::Engine => '/commontator'
+
+  resources :profiles
 
 end
