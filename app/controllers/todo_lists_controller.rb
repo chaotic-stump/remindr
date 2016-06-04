@@ -3,6 +3,7 @@ class TodoListsController < ApplicationController
 
   def index
     @todo_lists = TodoList.all
+    # @todo_items = TodoItem.find(params[:id])
   end
 
   def show
@@ -13,6 +14,7 @@ class TodoListsController < ApplicationController
   end
 
   def new
+    @todo_list = TodoList.new
   end
 
   def create
@@ -33,7 +35,7 @@ class TodoListsController < ApplicationController
   end
 
   def destroy
-    
+
     @todo_list.destroy
     redirect_to todo_list_path
   end
