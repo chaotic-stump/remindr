@@ -1,0 +1,9 @@
+
+<hr/>
+<%= image_tag @user.image.url(:medium)%> 
+<br/>
+
+<h6 class='text-uppercase'><%= @user.first_name %> ACCOUNTS</h6>
+<%= link_to "BANKR", bank_item_path(@user) %> |
+<%= link_to "GROCRY", grocery_path(@user) %> |
+<%= link_to "SYNRGY", todo_list_path(@user) %>

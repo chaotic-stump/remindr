@@ -2,7 +2,9 @@
   <div class="nav-wrapper black">
     <div class="container">
       <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <% if current_user != nil %>
         <li>Welcome, <%= current_user.first_name %></li>
+      <% end %>
       </ul>
       <a href="/" class="brand-logo center">REMINDR</a>
       <ul id="nav-mobile" class="right hide-on-small-and-down">

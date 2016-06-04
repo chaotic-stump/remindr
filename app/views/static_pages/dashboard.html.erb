@@ -15,9 +15,9 @@
 <% if (current_user.image.url != "/images/original/missing.png") %>
 	<%= image_tag current_user.image.url(:medium) %> <hr/>
 <% end %>
-<%= link_to 'BANKR', bank_items_path %>
-<%= link_to 'GROCRY', groceries_path %>
-<%= link_to 'SYNRGY', todo_lists_path %>
+<%= link_to 'BANKR', bank_items_path %> |
+<%= link_to 'GROCRY', groceries_path %> |
+<%= link_to 'SYNRGY', todo_lists_path %> |
 <%= link_to 'EDIT PROFILE', edit_user_registration_path %> |
 <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %> |
 <%= link_to 'PROFILES', profiles_path %>
