@@ -1,23 +1,19 @@
-	<%= form_for [@list, @item] do |f| %>
-		<div class='form-group'>
-			<%= f.label :title %>
-			<%= f.text_field :title, class: 'form-control' %>
-		</div>
+<%= form_for [@bank_item] do |f| %>
 
-		<div class='form-group'>
-			<%= f.label :complete_by, 'Set a date you want to complete this by' %>
-			<%= f.date_select :complete_by, class: 'form-control' %>
-		</div>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
 
-		<% if @item.id %>
-			<div class='form-group'>
-				<%= f.check_box :completed %>
-				<%= f.label :completed %>
-			</div>
-		<% end %>
+	<%= f.label :priority  %>
+	<%= f.text_field :priority %>
 
-		<br>
+  <%= f.label :amount %>
+  <%= f.text_field :amount %>
 
-		<%= f.submit class: 'btn btn-primary' %>
-	<% end %>
-</div>
+  <%= f.label :due_date %>
+  <%= f.date_select :due_date %>
+
+
+<hr>
+
+<%= f.submit%>
+<% end %>
