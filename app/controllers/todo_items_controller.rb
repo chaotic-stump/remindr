@@ -1,6 +1,6 @@
 class TodoItemsController < ApplicationController
   before_action :todo_list
-  before_action :todo_item, except: [:index, :new, :create]
+  before_action :todo_item, only: [:edit, :update, :destroy, :show]
 
   def index
     @todo_items = @todo_list.todo_items
@@ -15,8 +15,8 @@ class TodoItemsController < ApplicationController
 
   def create
     @todo_item = @todo_list.todo_items.create(todo_item_params)
-    if @item.save
-      redirect_to todo_list_item_path(@todo_list, @todo_item)
+    if @todo_item.save
+      redirect_to todo_list_path(@todo_list)
     else
       render:new
     end
@@ -26,9 +26,9 @@ class TodoItemsController < ApplicationController
   end
 
   def update
-    @todo_item = Item.find(params[:id])
-    if @todo_item.update(item_params)
-      redirect_to todo_list_todo_item_path(@list, @item)
+    @todo_item = TodoItem.find(params[:id])
+    if @todo_item.update(todo_item_params)
+      redirect_to todo_list_path(@todo_list) #, @todo_item)
     else
       render :edit
     end
@@ -36,19 +36,19 @@ class TodoItemsController < ApplicationController
 
   def destroy
     @todo_item.destroy
-    redirect_to list_path(@todo_list)
+    redirect_to todo_list_path(@todo_list)
   end
 
   private
     def todo_item_params
-      params.require(:item).permit(:name, :complete)
+      params.require(:todo_item).permit(:name, :complete)
     end
 
-    def list
-      @list = List.find(params[:list_id])
+    def todo_list
+      @todo_list = TodoList.find(params[:todo_list_id])
     end
 
-    def item
-      @item = Item.find.(params[:id])
+    def todo_item
+      @todo_item = TodoItem.find(params[:id])
     end
 end

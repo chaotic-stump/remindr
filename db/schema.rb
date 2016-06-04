@@ -80,9 +80,15 @@ ActiveRecord::Schema.define(version: 20160604224924) do
   create_table "todo_items", force: :cascade do |t|
     t.string   "name"
     t.boolean  "complete"
+<<<<<<< fb0e6a4228e080b0c5c1b75796b0f195d84a0bc6
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+=======
+    t.integer  "todo_list_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+>>>>>>> todo full crud
   end
 
   create_table "todo_lists", force: :cascade do |t|

@@ -12,7 +12,7 @@ class GroceriesController < ApplicationController
   def create
   	@grocery = Grocery.new(grocery_params)
   	if @grocery.save
-  		redirect_to groceries_path #(@grocery)
+  		redirect_to groceries_path
   	else
   		render :new
   	end

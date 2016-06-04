@@ -1,2 +1,4 @@
-<h1>TodoItems#edit</h1>
-<p>Find me in app/views/todo_items/edit.html.erb</p>
+<h1>Edit Synrgy Items</h1>
+
+<%= render(partial: 'form') %>
+<%= link_to 'Delete Item', todo_list_todo_item_path, method: :delete, data: {confirm: 'Sure you wanna delete?'} %>
