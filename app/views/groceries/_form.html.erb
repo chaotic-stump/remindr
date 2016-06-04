@@ -1,0 +1,15 @@
+<h1>Add new grocrys:</h1>
+
+<%= form_for @grocery do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true %>
+
+    <%= f.label :completed %>
+		<%= f.check_box :completed %>
+  
+    <%= f.submit "create grocry item" %>
+
+    <% f.hidden_field :user_id, :value => current_user.id %>
+
+<% end %>

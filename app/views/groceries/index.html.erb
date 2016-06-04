@@ -1,0 +1,18 @@
+<h1>Your Grocry List:</h1>
+<br />
+
+<% if @groceries.any? %>
+	<ul>
+		<% @groceries.each do |grocery| %>
+			<li>
+				<h4>
+  			<%= link_to grocery.name, grocery_path(grocery) %>
+				</h4>
+  		</li>
+  	<% end %>
+  </ul>
+<% else %>
+  <h3>No grocrys, please add one!</h3>
+<% end %>
+
+<%= link_to 'add new grocrys', new_grocery_path %>

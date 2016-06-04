@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-         has_many :bank_items, dependent: :destroy
+  has_many :bank_items, dependent: :destroy
   acts_as_commenter
+  has_one :grocery
+  validates_presence_of :email
 end
