@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :users
   resources :bank_items
 
+  mount Commontator::Engine => '/commontator'
 
 end

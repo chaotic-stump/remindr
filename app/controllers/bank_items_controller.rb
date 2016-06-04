@@ -29,6 +29,7 @@ class BankItemsController < ApplicationController
 
   def show
     @bank_item = current_user.bank_items.find(params[:id])
+    # commontator_thread_show(@bank_item)
   end
 
   def destroy

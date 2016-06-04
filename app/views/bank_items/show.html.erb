@@ -5,4 +5,5 @@
   <%= @bank_item.amount %>
   <%= @bank_item.due_date %>
 
-  <%= link_to 'All Bills', bank_items_path %>
+<%= commontator_thread(@bank_item) %>
+<%= link_to 'All Bills', bank_items_path %>

@@ -1,7 +1,7 @@
 <h1>These are your Bills</h1>
 
 <% @bank_items.each do |item| %>
-  <%= item.name %>
+  <%= link_to item.name, item %>
   <%= item.priority %>
   <%= item.amount %>
   <%= item.due_date %>
