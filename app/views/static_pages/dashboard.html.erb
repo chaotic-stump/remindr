@@ -6,10 +6,16 @@
   <%=link_to image_tag('remindr_logo.png'), '/'%>
 </div>
 
-<div class='dashboard-logos'>
-  <%= link_to image_tag('bankr_logo.png'), bank_items_path %>
-  <%= link_to image_tag('grocry_logo.png'), groceries_path %>
-  <%= link_to image_tag('synrgy_logo.png'), todo_lists_path %>
+<div class = "dashboard-logos row">
+  <div class = "col s12 m12 l4">
+    <%= link_to(image_tag('bankr_logo.png'), bank_items_path) %>
+  </div>
+  <div class = "col s12 m12 l4">
+    <%= link_to(image_tag('grocry_logo.png'), groceries_path) %>
+  </div>
+  <div class = "col s12 m12 l4">
+    <%= link_to(image_tag('synrgy_logo.png'), todo_lists_path) %>
+  </div>
 <div>
 
 <% if (current_user.image.url != "/images/original/missing.png") %>
@@ -21,4 +27,3 @@
 <%= link_to 'EDIT PROFILE', edit_user_registration_path %> |
 <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %> |
 <%= link_to 'PROFILES', profiles_path %>
-

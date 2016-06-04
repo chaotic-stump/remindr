@@ -5,9 +5,15 @@
 	  <p>Bill to Pay: <%= link_to item.name, item %> </p>
 	<% end %>
 <% else %>
-  
+
 	<h3 class='center'> No Bankr has been added!</h3>
+<% @bank_items.each do |item| %>
+  <p>Bill to Pay: <%= link_to item.name, item %> </p>
+
 
 	<%= link_to 'New Item', new_bank_item_path %>
 <% end %>
+
+
+<%= link_to 'Add A Bill', new_bank_item_path, class: "green darken-4 white-text waves-effect waves-light btn" %>
 <br>

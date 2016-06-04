@@ -9,6 +9,6 @@
 
 
 <br />
-<%= link_to 'add more grocrys', new_grocery_path %>
-<%= link_to 'delete grocry item', grocery_path, method: :delete, data: {confirm: 'Sure you wanna delete?'} %>
-<%= link_to 'back to all grocrys', groceries_path %>
+<%= link_to 'add more grocrys', new_grocery_path, class: "green darken-4 white-text waves-effect waves-light btn" %>
+<%= link_to 'delete grocry item', grocery_path, method: :delete, data: {confirm: 'Sure you wanna delete?'}, class: "red darken-4 white-text waves-effect waves-light btn" %>
+<%= link_to 'back to all grocrys', groceries_path, class: "green darken-4 white-text waves-effect waves-light btn" %>
