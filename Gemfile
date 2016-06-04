@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'commontator', '~> 4.11.1'
 
+gem "paperclip", "~> 5.0.0.beta1"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

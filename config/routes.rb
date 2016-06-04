@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 root 'static_pages#dashboard'
 
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
 
   resources :todo_lists  do
     resources :todo_items
