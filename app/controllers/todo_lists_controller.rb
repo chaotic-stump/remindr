@@ -13,6 +13,7 @@ class TodoListsController < ApplicationController
   end
 
   def new
+    @todo_list = TodoList.new
   end
 
   def create
@@ -33,7 +34,11 @@ class TodoListsController < ApplicationController
   end
 
   def destroy
-    
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> todo_list_views
     @todo_list.destroy
     redirect_to todo_list_path
   end

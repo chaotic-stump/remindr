@@ -9,6 +9,7 @@
 </head>
 <body>
 <%= render(partial: 'layouts/nav') %>
+<div class="center">
 <% if flash.any? %>
     <% flash.each do |key, value| %>
         <div class="flash <%= key %>">
@@ -18,6 +19,6 @@
 <% end %>
 <%= yield %>
 
-
+</div>
 </body>
 </html>
