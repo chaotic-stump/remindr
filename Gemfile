@@ -21,7 +21,7 @@ gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'commontator', '~> 4.11.1'
 
-gem "paperclip", "~> 5.0.0.beta1"
+gem "paperclip", "~> 5.2.0"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
